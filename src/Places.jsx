@@ -9,7 +9,7 @@ This is the PLACES component
   }
 }
 
-export default Places;
+export default Places ;
 
 
 

@@ -42287,13 +42287,15 @@ GMap.defaultProps = {
 exports.default = GMap;
 
 },{"react":472,"react-google-maps":420}],478:[function(require,module,exports){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _reactBootstrap = require('react-bootstrap');
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -42304,33 +42306,50 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var React = require('react');
 
 var Hero = function (_React$Component) {
-  _inherits(Hero, _React$Component);
+    _inherits(Hero, _React$Component);
 
-  function Hero() {
-    _classCallCheck(this, Hero);
+    function Hero() {
+        _classCallCheck(this, Hero);
 
-    return _possibleConstructorReturn(this, (Hero.__proto__ || Object.getPrototypeOf(Hero)).apply(this, arguments));
-  }
-
-  _createClass(Hero, [{
-    key: "render",
-    value: function render() {
-      return React.createElement(
-        "div",
-        { className: "test" },
-        "Hero"
-      );
+        return _possibleConstructorReturn(this, (Hero.__proto__ || Object.getPrototypeOf(Hero)).apply(this, arguments));
     }
-  }]);
 
-  return Hero;
+    _createClass(Hero, [{
+        key: 'render',
+        value: function render() {
+            return React.createElement(
+                _reactBootstrap.Jumbotron,
+                { className: 'jumbo' },
+                React.createElement(
+                    'div',
+                    { className: 'jumbo-overlay' },
+                    React.createElement(
+                        'div',
+                        { className: 'jumbo-text' },
+                        React.createElement(
+                            'h1',
+                            null,
+                            'SEATTLE SAMARITANS'
+                        ),
+                        React.createElement(
+                            'h3',
+                            null,
+                            'Free Meal Resources in the Emerald City'
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Hero;
 }(React.Component);
 
 ;
 
 exports.default = Hero;
 
-},{"react":472}],479:[function(require,module,exports){
+},{"react":472,"react-bootstrap":245}],479:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -42407,11 +42426,140 @@ exports.default = Places;
 },{"react":472}],480:[function(require,module,exports){
 'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _reactBootstrap = require('react-bootstrap');
+
+var _Nav = require('react-bootstrap/lib/Nav');
+
+var _Nav2 = _interopRequireDefault(_Nav);
+
+var _NavItem = require('react-bootstrap/lib/NavItem');
+
+var _NavItem2 = _interopRequireDefault(_NavItem);
+
+var _NavDropdown = require('react-bootstrap/lib/NavDropdown');
+
+var _NavDropdown2 = _interopRequireDefault(_NavDropdown);
+
+var _MenuItem = require('react-bootstrap/lib/MenuItem');
+
+var _MenuItem2 = _interopRequireDefault(_MenuItem);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = require('react');
+
+var SortBy = function (_React$Component) {
+  _inherits(SortBy, _React$Component);
+
+  function SortBy() {
+    _classCallCheck(this, SortBy);
+
+    return _possibleConstructorReturn(this, (SortBy.__proto__ || Object.getPrototypeOf(SortBy)).apply(this, arguments));
+  }
+
+  _createClass(SortBy, [{
+    key: 'render',
+    value: function render() {
+      return React.createElement(
+        _Nav2.default,
+        { bsStyle: 'tabs', activeKey: '1', onSelect: this.handleSelect },
+        React.createElement(
+          _NavItem2.default,
+          { eventKey: '1', href: '/home' },
+          'NavItem 1 content'
+        ),
+        React.createElement(
+          _NavItem2.default,
+          { eventKey: '2', title: 'Item' },
+          'NavItem 2 content'
+        ),
+        React.createElement(
+          _NavItem2.default,
+          { eventKey: '3', disabled: true },
+          'NavItem 3 content'
+        ),
+        React.createElement(
+          _NavDropdown2.default,
+          { eventKey: '4', title: 'Dropdown', id: 'nav-dropdown' },
+          React.createElement(
+            _MenuItem2.default,
+            { eventKey: '4.1' },
+            'Action'
+          ),
+          React.createElement(
+            _MenuItem2.default,
+            { eventKey: '4.2' },
+            'Another action'
+          ),
+          React.createElement(
+            _MenuItem2.default,
+            { eventKey: '4.3' },
+            'Something else here'
+          ),
+          React.createElement(_MenuItem2.default, { divider: true }),
+          React.createElement(
+            _MenuItem2.default,
+            { eventKey: '4.4' },
+            'Separated link'
+          )
+        )
+      );
+    }
+  }]);
+
+  return SortBy;
+}(React.Component);
+
+;
+
+exports.default = SortBy;
+
+},{"react":472,"react-bootstrap":245,"react-bootstrap/lib/MenuItem":203,"react-bootstrap/lib/Nav":210,"react-bootstrap/lib/NavDropdown":211,"react-bootstrap/lib/NavItem":212}],481:[function(require,module,exports){
+'use strict';
+
+var _Col = require('react-bootstrap/lib/Col');
+
+var _Col2 = _interopRequireDefault(_Col);
+
+var _Row = require('react-bootstrap/lib/Row');
+
+var _Row2 = _interopRequireDefault(_Row);
+
+var _Nav = require('react-bootstrap/lib/Nav');
+
+var _Nav2 = _interopRequireDefault(_Nav);
+
+var _Button = require('react-bootstrap/lib/Button');
+
+var _Button2 = _interopRequireDefault(_Button);
+
+var _Grid = require('react-bootstrap/lib/Grid');
+
+var _Grid2 = _interopRequireDefault(_Grid);
+
+var _Jumbotron = require('react-bootstrap/lib/Jumbotron');
+
+var _Jumbotron2 = _interopRequireDefault(_Jumbotron);
 
 var _Hero = require('./Hero.jsx');
 
 var _Hero2 = _interopRequireDefault(_Hero);
+
+var _SortBy = require('./SortBy.jsx');
+
+var _SortBy2 = _interopRequireDefault(_SortBy);
 
 var _GMap = require('./GMap.jsx');
 
@@ -42436,16 +42584,34 @@ var App = React.createClass({
             'div',
             null,
             React.createElement(
-                'div',
-                { className: 'container-fluid' },
-                React.createElement(_Hero2.default, null),
+                _Grid2.default,
+                { fluid: true },
                 React.createElement(
-                    'div',
-                    { style: {
-                            width: 1200,
-                            height: 1200
-                        } },
-                    React.createElement(_GMap2.default, null)
+                    _Row2.default,
+                    null,
+                    React.createElement(_Hero2.default, null)
+                ),
+                React.createElement(
+                    _Row2.default,
+                    null,
+                    React.createElement(
+                        _Col2.default,
+                        { xs: 12 },
+                        React.createElement(_SortBy2.default, null)
+                    )
+                ),
+                React.createElement(
+                    _Row2.default,
+                    null,
+                    React.createElement(
+                        _Col2.default,
+                        { xs: 12 },
+                        React.createElement(
+                            'div',
+                            { className: 'map-container' },
+                            React.createElement(_GMap2.default, null)
+                        )
+                    )
                 ),
                 React.createElement(_Places2.default, null)
             )
@@ -42455,4 +42621,4 @@ var App = React.createClass({
 
 ReactDOM.render(React.createElement(App, null), document.getElementById('app'));
 
-},{"./GMap.jsx":477,"./Hero.jsx":478,"./Places.jsx":479,"react":472,"react-bootstrap":245,"react-dom":257}]},{},[480]);
+},{"./GMap.jsx":477,"./Hero.jsx":478,"./Places.jsx":479,"./SortBy.jsx":480,"react":472,"react-bootstrap/lib/Button":164,"react-bootstrap/lib/Col":172,"react-bootstrap/lib/Grid":186,"react-bootstrap/lib/Jumbotron":192,"react-bootstrap/lib/Nav":210,"react-bootstrap/lib/Row":232,"react-dom":257}]},{},[481]);
