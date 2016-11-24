@@ -8,7 +8,7 @@ class Hero extends React.Component {
             <Jumbotron className="jumbo">
                 <div className="jumbo-overlay">
                     <div className="jumbo-text"><h1>SEATTLE SAMARITANS</h1>
-                    <h3>Free Meal Resources in the Emerald City</h3>
+                    <h3>Free Local Food, Shelter, & Medical Resources</h3>
                     </div>
 
                 </div>

@@ -17,6 +17,7 @@ body {
       height: 30vw;
     position: relative;
 color: #fafafa;
+min-height: 400px;
 }
 .jumbo h1 {
   font-size: 8em;
@@ -37,12 +38,19 @@ color: #fafafa;
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0,0,0,.70);
+  background: rgba(0,0,0,.45);
 
 }
+
 
 .map-container {
   height:60vh;
   width: 100vw;
-  margin-top:5%;
+  /*margin-top:5%;*/
+  margin-left:-10px;
+}
+
+.info-display {
+  height:50vh;
+  overflow:scroll;
 }

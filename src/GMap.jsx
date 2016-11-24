@@ -17,7 +17,7 @@ static defaultProps = {
           <GoogleMap
         defaultZoom = {11}
         defaultCenter = {this.props.center}
-        options = {{streetViewControl: false, mapTypeControl: false}}>
+        options = {{streetViewControl: false, mapTypeControl: false, scrollwheel: false}}>
       </GoogleMap>
     } />
   )
